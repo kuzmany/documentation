@@ -35,7 +35,7 @@ Kliknite na drop down šípku v pravom hornom rohu podrobností kontaktu. Vybert
 
 Kliknite na drop down šípku v pravom hornom rohu podrobností kontaktu. Vyberte *Kampane*. Zobrazí sa modálna tabuľka, kde uvidíte všetky kampane. Zelený prepínač znamená, že kontakt patrí do kampane, oranžový prepínač znamená opak. Kliknite na prepínač, aby ste pridali/odstránili kontakt k/z kampane.
 
-## Zlučiť dva kontakty
+## Zlúčiť dva kontakty
 
 Ak máte v Mautic databáze 2 kontakty, ktoré sú fyzicky jednou osobou, môžete ich zlúčiť prostredníctvom funkcie Zlúčenia. Kliknite na drop down šípku v pravom hornom rohu podrobností kontaktu, vyberte *Zlúčiť* položku, zobrazí sa modálna tabuľka. Vyhľadajte kontakt, ktorý chcete zlúčiť s aktuálnym kontaktom. Zvolená položka sa počas hľadania aktualizuje. Zvoľte správny kontakt a stlačte tlačidlo *Zlúčiť*.
 
