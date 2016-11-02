@@ -1,17 +1,18 @@
-## Message Queues
+## Fronty správ
 
-When a campaign _**marketing**_ email is triggered or an email broadcast (segment email) and either a contact has a frequency rule defined or there is a default set in Configuration, the email may be sent to a queue to be processed.
+Keď sa spustí _**marketingový**_ email z kampane, alebo emailové rozosielanie (segmentové maily) a buď keď má kontakt nastavené pravidlo frekvencie, alebo je pravidlo rozosielania nastavené dafultne v Konfigurácii, email môže byť poslaný do fronty na spracovanie.
 
-### Priority and number of attempts
+
+### Priorita a počet pokusov
 
 ![](/contacts/media/marketing-email.png)
 
-- You can select priority as High or Normal. All messages with priority high will be put in front of the queue when processing messages for a given date. Broadcasts are always injected as normal priority.
-- Number of attempts will try to send email again if it has been rescheduled, note that even if an email is pending but if the number of attempts has been reached, the message will not be sent.
+- Môžte nastaviť prioritu na Vysokú alebo Normálnu. Pri spracovaní správ daného dátumu budú všetky správy s prioritou vysoká zaradené na začiatok fronty. Emailové rozosielania sa vždy vkladajú ako normálna priorita.
+- Počet pokusov sa bude snažiť poslať email znova, ak bol jeho dátum odoslania preložený, zapamätajte si, že ak bude email v stave čakajúci na vybavenie, ale množstvo zadaných pokusov už bolo dosiahnute, takáto správa nebude odoslaná.
 
-### Processing a message queue
-Messages are put into the queue with status pending, so all pending messages that have not met their max number of attempts will be processed using this command.
+### Spracovanie fronty správ
+Správy sú zaradené do frondy so statusom čakajúce na vybavenie a teda všetky takéto správy, ktoré ešte nedosiahli ich maximálny počet pokusov budú spracované použitím tohto príkazu.
 
-Setup your cron as followed:
+Nastavte si cron nasledovne:
 
 `php app/console mautic:messages:send`
