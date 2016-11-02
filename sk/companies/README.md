@@ -39,6 +39,7 @@ Možete priradiť spoločnosť k identifikovaným kontaktom cez kampaň vybraní
 
 ##### Keď sa identifikuje kontakt cez formulár
 Ak je kontakt identifikovaný cez formulár, spoločnosť može byť taktiež identifikovaná/vytvorená ak:
+ 
  -Meno spoločnosti je zvolené ako pole formuláru (povinné pre pridadenie/vytvorenie spoločnosti)
  -Mesto je zvolené ako pole formuláru (povinné pre pridadenie/vytvorenie spoločnosti)
  -Krajina je zvolená ako pole formuláru (povinné pre pridadenie/vytvorenie spoločnosti)
