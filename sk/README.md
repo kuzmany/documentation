@@ -7,63 +7,62 @@ Táto príručka slúži ako [dokumentácia pre Mautic](https://www.mautic.org/d
 
 [Kliknite sem](https://mautic.org/docs/mautic_docs_en.pdf) pre stiahnutie tejto príručky ako PDF.
 
-### How to contribute to the docs
+### Ako prispieť k dokumentu
 
-This repository is the source code for [Gitbook](https://www.gitbook.com/) published at [www.mautic.org/docs](https://www.mautic.org/docs/index.html). The source code is shared here on GitHub so anyone could contribute to the documentation the same way the programmers do with the actual Mautic code. 
+Táto príručka je zdrojovým kódom pre [Gitbook](https://www.gitbook.com/), ktorá je zverejnená na [www.mautic.org/docs](https://www.mautic.org/docs/index.html). Zdrojový kód je zdieľaný na GitHube, takže ktokoľvek môže prispieť k dokumentácii rovnakým spôsobom, ako programátori prispeivajú k Mautic kódu. 
 
-#### Why is git used for the documentation
+#### Prečo je na dukumentáciu použitý git
 
-- *versions*. Anyone can go back an look how the text looked like.
-- *authorship*. Not only every file, but every line has its author.
-- *community contributions*. No need to worry about deleting someone else's work while working on the same document.
+- *verzie*. Každý si môže pozrieť históriu a pozrieť si, ako vyzeral text pred tým.
+- *autorstvo*. Nielen každý súbor, ale aj každý riadok má svojho autora.
+- *prispievanie komunity*. Nemusíte sa báť, že zmažete prácu niekoho iného, zatiaľ čo pracujete na tom istom dokumente.
 
-Although some git knowledge is required to clone, modify, commit and push changes, there is a way how to avoid that and edit the files directly in the GitHub web interface. If you know git, use the workflow you like. If not, following guide will show you how to contribute easily.
+Aj keď niektoré git poznatky si vyžadujú klonovanie, upravenie, potvrdenie a zverejnenie zmien, existuje spôsob ako sa tomu vyhnúť, a upravovať súbory priamo cez GitHub web rozhranie. Ak ovládate git, workflow môžete použiť ako len chcete. Ak nie, postupujte podľa týchto inštrukcií aby ste mohli jednoducho prispieť.
 
-#### Edit documents in a browser
+#### Úprava dokumentov v prehliadači
 
-1. [Fork](https://github.com/mautic/documentation#fork-destination-box) this repository under your account so you'd have permission to edit.
-2. Select a file to edit. The file structure is explained below. Now, let's edit the *README.md* file to show the principles. Click on it.
-3. The content of *README.md* should be visible and the *Edit* buton (the pencil icon) above as well. Hit it.
-4. The content is written in [Markdown markup](https://daringfireball.net/projects/markdown/). Very simple text based formating.
-5. Make a change to the file. For example add to the end `This is my first contribution`.
-6. When you made a change, scroll down and notice the form called *Commit changes*. This is important. To save a change, you have to describe what you've changed and why. Write for example `A new line added for testing purposes`. Do not save yet!
-7. Because the GitHub web interface does not provide all features of git, we won't have an easy way to revert our change back to the original state. We'd have to create another commit where we'd delete the added line. That would make a mess in the commit history. So instead, we create a new branch. There is a checkbox for it "Create a new branch...". The branch has to have a name. `{yourusername}-patch-1` will be prefilled. Let's change it to `{yourusername}-testing`. Click the *Propose file change* now.
-8. Ok, so the change exists in your repository now. To propose the change to the official repository, you have to send a pull request (PR). You've been redirected to do just that. Here you describe your proposed change and click (please don't send the testing PRs) the *Create pull request* button.
+1. [Uložte](https://github.com/mautic/documentation#fork-destination-box) si túto príručku pod Váš účet aby ste boli oprávaný ju upravovať.
+2. Vyberte si súbor na úpravu. Štruktúra súborov je vysvetlená nižšie. Teraz upravte *README.md* súbor, aby sme si vysvetlili základy. Kliknite naň..
+3. Obsah *README.md* by mal byť viditeľný rovnako ako tlačidlo úpravy (ikona s ceruzkou). Kliknite naň.
+4. Obsh je písaný v [Markdowne](https://daringfireball.net/projects/markdown/). Jednoduché formátovanie textu.
+5. Urobte zmeny v súbore. Napríklad napíšte na koniec `Toto je môj prvý príspevok`.
+6. Keď ste vykonali zmeny, posuňte sa dole a nájdite formulku *Zadať zmeny*. Toto je dôležité. Aby ste uložili zmeny, musíte popísať čo ste zmenili a prečo. Napíšte napríklad `Pridaný riadok na účely testovania`. Ešte to neukladajte!
+7. Pretože GitHub webové rozhranie neposkytuje všetky funkcie gitu, nemáme jednoduchý spôsob ako vrátiť zmeny do pôvodného stavu. Museli by zmeniť zadaný riadok a znova zadať zmeny, a to by urobil neporiadok v histórii zmien. Takže namiesto toho urobíme novú vetvu. Existuje na to políčko “Vytvor novú vetvu…”. Vetva musí mať názov. {vašeuživateľskémeno}-patch-1 bude ponúkané štandardne. Zmeňme to na {vašeuživateľskémeno}-testing. Kliknite na *Navrhni zmenu súboru* teraz.
+8. OK, takže zmena existuje vo Vašich zdrojoch. Aby ste navrhli zmenu v oficiálnych zdrojoch, musíte poslať žiadosť o stiahnutie (ŽS). Budete tam presmerovaní. Tu popíšete navrhované zmeny a kliknete (prosíme neposielajte testovacie ŽS) na tlačidlo *Vytvor žiadosť o stiahnutie*.
 
-If you want to clean after the testing, go to the *Branches* section and delete the testing branch.
+Ak si chcete po tomto teste upratať, choďte do sekcie *Vetví* a zmažte testovaciu vetvu.
 
-#### The file structure
+#### Štruktúra súborov
 
-We've worked with the *README.md* file in the previous section. This file is shown in the home page of a GitHub repository and you are reading its content right now. It doesn't have anything to do with the Mautic documentation.
+V predchádzajúcej časti sme pracovali s *README.md* súborom. Tento súbor je zobrazený na domovskej stránke GitHug a práve teraz čítate jeho obsah. S dokumentáciou o Mauticu nemá nič spoločné.
 
-The *SUMMARY.md* file defines the menu of the documentation. If you'll add a new page to the documentation, you'll have to also add a new line there defining the title and the link to the file. It's pretty straightforward when you'll see the current menu items.
+*SUMMARY.md* súbor definuje menu dokumentácie. Ak pridáte nové stránky do dokumentácie, musíte tiež pridať nové riadky definujúce názov a odkaz na súbor. Je to celkom jednoduché keď vidíte aktuálne položky v menu.
 
-The folders are here to group the topics together. Open for example the *asset* folder. You'll see it has its own *README.md* file. It is the main content when you click on the Asset menu item. The *manage_assets.md* file is a subitem. The *media* subfolder contains all the images used in the *md* files.
+Priečinky tu existujú aby zoskupili témy. Otvorte napríklad priečinok *Asset*. Uvidíte, že má vlastný *README.md* súbor. Je to hlavný obsah, keď kliknite na menu *Asset*. *manage_assets.md* súbor je podpoložkou. Podpriečinok *médií* obsahuje všetky obrázky použité v *md* súboroch.
 
-#### Links
+#### Odkazy
 
-Often you'll want to make a link into another place of the documentation. In Markdown, the link looks like this:
-
-```
-[link title](http://example.com)
-```
-
-This will create an external link with absolute URL. If you want to create an internal link, use the relative URL like this:
+Často chcete odkázať na iné miesto v dokumentácii použitím odkazu. V Markdowne vyzerá odkaz takto:
 
 ```
-[these steps](./../plugins/integration_test.html)
+[názov odkazu](http://example.com)
 ```
-This will link to `plugins/integration_test.html` on the documentation website created from the *md* source file.
 
-#### Images
-
-As noted above, the images can be placed in the media subfolders. The images probably isn't possible to upload via the GitHub web interface, but you can upload them to any public URL and link them from there.
+To vytvorí externý odkaz s absolútnou URL. Ak chcete vytvoriť interná odkaz, požite relatívnu URL takto:
 
 ```
-![alternative text here](http://example.com/images/apple.png "Tooltip text here")
+[tieto kroky](./../plugins/integration_test.html)
 ```
-Or, if you'd want to display an image already uploaded to the documentation repository, you can use relative path:
+Tento odkaz na `plugins/integration_test.html ` na stránke dokumentácie bol vytvorený zo zdrojového md súboru.
+
+#### Obrázky
+
+Ako je uvedené vyššie, obrázky môžu byť uložené v podpriečinkoch médií. Pravdepodobne nie je možné nahrať obrázky prostredníctvom webového rozhrania GitHubu, ale môžete ich nahrať na akúkoľvek verejnú URL a odkázať na nich.
 
 ```
-![alternative text here](/assets/media/assets-newcategory.png "Tooltip text here")
+![alternatívny text sem](http://example.com/images/apple.png "Text nástroja sem")
+```
+Alebo ak by ste chceli zobraziť obrázok už nahraný v zdrojoch dokumentácie, môžete použiť relatívnu cestu:
+```
+![alternatívny text sem](/assets/media/assets-newcategory.png "Text nástroja sem")
 ```
