@@ -239,4 +239,4 @@ Existuje niekoľko iných spôsobov ako sledovať aktivitu kontaktu a priradiť 
 
 ### Riešenie problémov
 
-Ak sledovanie nefunguje, pozrite sa na [Riešeia problémov so stránkami](./../pages/troubleshooting.html) alebo [Riešenia problémo s emailami](./../emails/troubleshooting.html)
+Ak sledovanie nefunguje, pozrite sa na [Riešeia problémov so stránkami](./../pages/troubleshooting.html) alebo [Riešenia problémov s emailami](./../emails/troubleshooting.html)
