@@ -1,49 +1,49 @@
-#What's New
-In this section we'll highlight the new features for each major release of Mautic.  They are in version order beginning with the latest.
+#Čo je nové
+V tejto časti si preberieme nové funkcie každej hlavnej verzie Mauticu. Sú zoradené podľa verzie, od najnovšej po najstaršiu.
 
-##Version 2.0
-Mautic 2.0 brought a significant number of enhancements to Mautic.  The full release notes are at https://github.com/mautic/mautic/releases/tag/2.0.0.
+##Verzia 2.0
+Mautic 2.0 predstavil množstvo vylepšení Mauticu. Kompletný popis verzie je dostupný na https://github.com/mautic/mautic/releases/tag/2.0.0.
 
-###Hosting Requirements
-- The PHP minimum version is now 5.6.19 (PHP 7 is supported!)
-- The MySQL minimum version is now 5.5.3
-- PostgreSQL support has been dropped
+###Požiadavky na hosting
+- Minimálna verzia PHP je teraz 5.6.19 (PHP 7 je podporované!)
+- Minimálna verzia MySQL je teraz 5.5.3
+- Podpora PostgreSQL je ukončená
 
-###Cron Jobs Update
-See [Cron Jobs](./../setup/cron_jobs.html)
+
+###Aktualizácia Cron úloh
+Pozri [Cron úlohy](./../setup/cron_jobs.html)
 
 ###Froala editor
 
-This release switches CKEditor in favor of Froala editor which has a more polished look and functionality. 
+Táto verzia prechádza z CKEditora na Froala editor, ktorý má vyladenejší výzor a funkčnosť.
 
-###New email and page builders!
+###Nové buildery emailov a stránok!
 
-Email and page builders have been overhauled to be cleaner and better. This means that custom themes have changed as well.
-[Watch this video for more.](https://mautic.wistia.com/medias/vtdlpc365u)
+Buildery emailov a stránok boli kompletne zrenovované, aby boli čistejšie a lepšie. To znamená, že sa zmenili aj vlastné motívy.
+[Pozrite si video pre viac informácií](https://mautic.wistia.com/medias/vtdlpc365u)
 
-###Dynamic web content
+###Dynamický obsah webu
 
-You can now push contact aware content to your web pages through Mautic campaigns.  See [Dynamic Web Content](./../dwc/index.html)
+Obsah na základe kontaktu môžete na svoje web stránky dostať prostredníctvom Mautic kampaní. Viď [Dynamický obsah webu](./../dwc/index.html)
 
-###Bi-directional Salesforce Integration
-This much anticipated feature is now in Mautic!  For an overview [watch this video](https://mautic.wistia.com/medias/4631xkjcw8).
+###Obojstranná integrácia Salesforce
+Táto veľmi očakávaná vlastnosť je teraz súčasťou Mauticu! Pre prehľad si [pozrite toto video](https://mautic.wistia.com/medias/4631xkjcw8).
 
-###Lifecycle stages
+###Fázy životného cyklu
 
-You can now track your contacts through various stages and lifecycles. 
-[Watch this video for more.](https://mautic.wistia.com/medias/ourd9qpfhy)
+Teraz môžete sledovať svoje kontakty prostredníctvom rôznych fáz a životných cyklov. [Pozrite si toto video pre viac informácií.](https://mautic.wistia.com/medias/ourd9qpfhy)
 
-###Updated Dashboard
+###Zaktualizovaný Dashboard
 
-Drag and Drop with new widgets for end-to-end attribution and more.
-[Watch this video for an overview.](https://mautic.wistia.com/medias/qzoqsqko12)
+Drag and Drop nové widgeety pre kompletné pridanie funkcie a viac.
+[Pre prehľad si pozrite toto video.](https://mautic.wistia.com/medias/qzoqsqko12)
 
 ###UTM Tags
-A simple code you can attach to a custom URL to track content and more.  The UTM tags that are currently supported are:
+Jednoduchý kód, ktorý môžete pridať k vlastnej URL pre sledovanie obsahu a viac. Aktuálne podporované UTM tagy sú:
 - utm_campaign
 - utm_content
 - utm_medium
 - utm_source
 - utm_term
 
-For more information on this [watch this video.](https://mautic.wistia.com/medias/vmqohgece0)
+Pre viac informácií si [pozrite toto video.](https://mautic.wistia.com/medias/vmqohgece0)
