@@ -1,13 +1,13 @@
-# Contact Monitoring
-The act of monitoring the traffic and activity of contacts can sometimes be somewhat technical and frustrating to understand. Mautic makes this monitoring simple and easy to configure.
+# Sledovanie kontaktov
+Sledovanie prenosu dát a aktivity kontaktov môže byť niekedy príliš technické a frustrujúce na pochopenie. Mautic robí toto sledovanie jednoduché a ľahko nastaviteľné.
 
-## Website Monitoring
+## Sledovanie webstránky
 
-Monitoring all traffic on a website can be done by loading a javascript file (since Mautic 1.4) or adding a tracking pixel to the website. It is important to note that traffic will not be monitored from logged-in Mautic users. To check that the JS/pixel is working, use an incognito or private browsing window or simply log-out of Mautic prior to testing.
+Sledovanie  prenosu dát na webstránke môže byť zrealizované nahraním javascrip súboru (od verzie 1.4) alebo pridaním sledovacieho pixelu na webstránku. Je treba poznamenať, že aktivita prihlásených Mautic užívateľov nebude sledované. Na prekontrolovanie toho, či JS/pixel funguje, použite inkognito alebo súkromné okno v prehliadači, alebo jednoducho sa odhláste z Mauticu pred tým, ako ho otestujete.
 
-### Javascript (JS) tracking
+### Sledovanie prostredníctvom javascriptu (JS)
 
-JS tracking method was implemented in Mautic 1.4 and recommended as the primary way of website tracking. To implement it, go to *Mautic configuration* > *Landing Page Settings* to find the JS tracking code build for your Mautic instance and insert it code before ending `<body/>` tag of the website you want to track. Or copy the code below and change the URL to your Mautic instance.
+Sledovanie prostredníctvom JS bolo implementované vo verzii 1.4 a odporúča sa ako hlavný spôsob sledovania webstránky. Aby ste ho implementovali, choďte v mautiku do *Mautic nastavenia* > *nastavenia vstupnej stránky* aby ste našli sledovací JS kód napísaný pre vašu Mautic inštanciu, a vložte kód pred ukončujúci `<body/> ` tag webstránky, ktorú chcete sledovať. Alebo prekopírujte nižšie uvedený kód a zmeňte URL na Vašu inštanciu Mauticu.
 
 ```
 <script>
@@ -20,19 +20,19 @@ JS tracking method was implemented in Mautic 1.4 and recommended as the primary 
 </script>
 ```
 
-_Don't forget to change the scheme (http(s)) either to http or https depending what scheme you use for your Mautic. Also, change [yourmautic.com] to domain where your Mautic runs._
+_Nezabudnite zmeniť schému (http(s)) buď na http alebo https v závislosti od toho, akú schému používate pre váš Mautic. Rovnako zmeňte [yourmautic.com] na doménu, kde beží váš Mautic._
 
-The advantage of JS tracking is that the tracking request which can take quite long time to load is loaded asynchronously so it doesn't slow down the tracked website. JS also allows to track more information automatically:
+Výhodou JS sledovania je, že žiadosť o sledovanie, ktorej môže trvať dlho, pokým sa nahrá, sa nahráva asynchrónne, takže nespomalí sledovanú stránku. JS tiež umožňuje automaticky sledovať viacero informácií:
 
-- **Page Title** is the text written between `</title>` tags.
-- **Page Language** is the language defined in the browser.
-- **Page Referrer** is the URL which the contact came from to the current website.
-- **Page URL** the URL of the current website.
+- **Názov stránky** je text napísaný medzi `</title>` tagmi.
+- **Jazyk stránky** je jazyk definovaný v browseri.
+- **Odkazovač stránky** je URL, z ktorej kontakt prišiel na aktuálnu webstránku.
+- **URL stránky** je URL aktuálnej webstránky.
 
-#### mt() Events
 
-As of 2.2.0, mt() supports two callbacks, `onload` and `onerror` accepted as the fourth argument. The `onload` method will be executed once the tracking pixel has been loaded. If the pixel fails for whatever reason, `onerror` will be executed. 
+#### mt() Udalosti
 
+Od verzie 2.2.0, mt() podporuje dva callbacky: `onload` a `onerror` akceptované ako štvrtý argument. `Onload` metóda bude vykonaná akonáhle sa nahraje sledovací pixel. Ak z nejakého dôvodu pixel zlyhá, vykoná sa `onerror`.
 ```
 mt('send', 'pageview', {}, {
     onload: function() {
@@ -44,89 +44,89 @@ mt('send', 'pageview', {}, {
 });
 ```
 
-#### Local Contact Cookie
+#### Cookie miestneho kontaktu
 
-As of Mautic 2.2.0, if CORS is configured to allow access from the domain the mtc.js is embedded, a cookie will be placed on the same domain with the name of `mtc_id`. This cookie will have the value of the ID for the currently tracked contact. This provides access to server side software to the contact ID and thus providing the ability to integrate with Mautic's REST API as well.
+Od verzie 2.2.0, ak CORS je nakonfigurovaný, aby umožnil prístup z domény, kde je mtc.js vložený, cookie s názvom `mtc_id` bude vložený na tú istú doménu. Tento cookie bude mať hodnotu ID pre aktuálne sledovaný kontakt. To poskytuje prístup na softvér na strane serveru k ID kontaktu a tým poskytuje možnosť integrovať sa aj s REST API Mauticu.
 
-#### Tracking of custom parameters
+#### Sledovanie osobitých parametrov
 
-You can attach custom parameters or overwrite the automaticly generated parameters to the pageview action as you could to the tracking pixel query. To do that, update the last row of the JS code above like this:
+Môžete pripojiť osobité parametre alebo prepísať automaticky vygenerované parametre aktivity pageview rovnako ako tomu je u žiadosti sledovacieho pixlu. Aby ste to dosiahli, zaktualizujte posledný riadok vyššie uvedeného JS kódu takto:
 
 ```
     mt('send', 'pageview', {email: 'my@email.com', firstname: 'John'});
 
 ```
-This code will send all the automatic data to Mautic and adds also email and firstname. The values of those fields must be generated by your system. 
+Tento kód pošle všetky automatické dáta do Mauticu a pridá tiež email a meno. Hodnoty týchto polí musia byť vygenerované Vašim systémom.
 
-#### Load Event
+#### Nahranie udalosti
 
-As the JS tracking request is loaded asynchronously, you can ask JS to call a function when request is loaded. To do that, define a *onload* function in options like this:
+Počas toho, ako je žiadosť JS o sledovanie nahrávaná asynchrónne, môžete požiadať JS aby zavolal funkciu, keď je žiadosť nahrávaná. Aby ste to dosiahli, definujte *onload* funkciu v nastaveniach takto:
 
 ```
     mt('send', 'pageview', {email: 'my@email.com', firstname: 'John'}, {onload: function() { alert("Tracking request is loaded"); }});
 
 ```
 
-#### Fingerprint (beta feature)
+#### Odtlačok prsta (beta funkcia)
 
-Mautic 1.4.0 comes with a tracking feature called fingerprint. [Fingerprint2](https://github.com/Valve/fingerprintjs2) library was used. It should work together or replace current tracking identifiers like IP address and/or cookie ID. This method is not yet deeply implemented into the system, but you can already see more information in the timeline page hit events in the contact detail:
+Mautic 1.4.0 je dodávaný so sledovacou funkciou nazvanou Odtlačok prsta. Bola použitá knižnica [Fingerprint2](https://github.com/Valve/fingerprintjs2). Mala by fungovať spolu s, alebo nahradiť aktuálne sledovacie identifikátory ako IP adresa a/alebo cookie ID. Táto metóda ešte nie je hlboko implementovaná v systéme, ale už teraz môžete vidieť viac informácií na stránke s históriou udalostí v detailoch o kontakte:
 
-- **Fingerprint** - Unique hash calculated from browser settings and another environment variables.
-- **Resolution** - With x Height of the device display resolution.
-- **Timezone Offset** - Amount of minutes plus or minus from UTC.
-- **Platform** - Platform of the device. Usually OS and processor architecture.
-- **Adblock** - A Boolean value whether contact uses an adblock browser plugin.
-- **Do Not Track** - A Boolean value if DNT is turned on.
+- **Odtlačok prsta** - unikátny hash vypočítaný z nastavení browsera a iných premenných prostredia.
+- **Rozlíšenie** - s x výškou rozlíšenia displeja zariadenia,
+- **Posun časového pásma** - množstvo minút, plus alebo mínus v porovnaní s UTC.
+- **Platforma** - platforma zariadenia. Obvykle OS a architektúra procesora.
+- **Adblock** - logická hodnota, či kontakt používa plugin blokujúci reklamu v prehliadači
+- **Nesledovať** - logická hodnota, či je zapnutá funkcia nesledovať.
 
-If you'd like to store any of the values above to a contact detail field, create new custom field called exactly like the name in the list above and make the field publicly updatable. You can also try to make the Fingerprint field unique and this way you can simulate the future fingerprint tracking. It is not tested feature though, do not use it on production unless you tested it first.
+Ak chcete uložiť ktorúkoľvek z vyššie uvedených hodnôt do detailov kontaktu, vytvorte nové osobité pole, nazvite ho presne ako je nazvané vo vyššie uvedenom zozname a urobte pole verejne aktualizovateľným. Môžete sa tiež pokúsiť urobiť pole Odtlačku prsta unikátny a týmto spôsobom môžete simulovať budúce sledovanie odtlačku prsta. Avšak nie je to ešte otestovaná funkcia. Nepoužívajte ju v produkcii, ak ste ju najprv neotestovali.
 
-### Tracking Pixel tracking
+### Sledovanie sledovacím pixelom
 
-This method is secondary since Mautic 1.4.
-
+Táto metóda je sekundárna od verzie 1.4.
 ```
 http://yourdomain.com/mtracking.gif
 ```
 
-#### Tracking Pixel Query
+#### Dotazovanie sledovacieho pixelu
 
-To get the most out of the tracking pixel, it is recommended that you pass information of the web request through the image URL.  
+Aby ste zo sledovacieho pixelu vyťažili čo možno najviac, odporúča sa preposlať informácie o webovej požiadavke cez URL obrázka.
 
-#### Page Information
+#### Informácie o stránke
 
-Mautic currently supports `page_url`, `referrer`, `language`, and `page_title` (note that the use of `url` and `title` are deprecated due to conflicts with contact fields).
+Mautic aktuálne podporuje `page_url`, `referrer`, `language`, a `page_title` (všimnite si, že použitie `url` a `title` sú zamietnuté v dôsledku konfliktu s poľami kontaktu).
 
-### UTM Codes 
+### UTM Kódy 
 
-Support for UTM codes in the contact time-line was introduced in version 1.2.1. `utm_medium`, `utm_source`, and `utm_campaign` are used to generate the content of the time-line entry.
+Podpora UTM kódov v histórii kontaktu bola predstavená vo verzii 1.2.1. `utm_medium`, `utm_source`, a `utm_campaign` sú používané na generovanie záznamu v histórii.
 
-`utm_campaign` will be used as  the time-line entry's title.
+`utm_campaign` bude použitý ako názov záznamu v histórii.
 
-`utm_medium` values are mapped to the following Font Awesome classes:
+`utm_medium` hodnoty sú zmapované do nasledujúcich tried Font Awesome:
+
  
 <table>
 <thead>
 <tr>
-    <th>Values</th>
-    <th>Class</th>
+    <th>Hodnoty</th>
+    <th>Trieda</th>
 </tr>
 </thead>
 <tbody>
-   <tr><td>social, socialmedia</td><td>fa-share-alt if <code>utm_source</code> is not available otherwise <code>utm_source</code> will be used as the class. For example, if <code>utm_source</code> is Twitter, fa-twitter will be used.</td></tr>
+   <tr><td>sociálne, sociálne médiá</td><td>fa-share-alt ak <code>utm_source</code> nie je dostupný, inak bude ako trieda použitý <code>utm_source</code> Napr., ak <code>utm_source</code> is Twitter, použije sa fa-twitter.</td></tr>
    <tr><td>email, newsletter</td><td>fa-envelope-o</td></tr>
    <tr><td>banner, ad</td><td>fa-bullseye</td></tr>
    <tr><td>cpc</td><td>fa-money</td></tr>
    <tr><td>location</td><td>fa-map-marker</td></tr>
-   <tr><td>device</td><td>fa-tablet if <code>utm_source</code> is not available otherwise <code>utm_source</code> will be used as the class. For example, if <code>utm_source</code> is Mobile, fa-mobile will be used.</td></tr>   
+   <tr><td>device</td><td>fa-tablet ak <code>utm_source</code> nie je dostupný, inak bude ako trieda použitý <code>utm_source</code> Napr., ak <code>utm_source</code> is Mobile, použije sa fa-mobile.</td></tr>   
 </tbody>
 </table>
 
 
-#### Embedding the Pixel
+#### Vloženie pixelu
 
-If you are using a CMS, the easiest way is to let one of our plugins do this for you (see below). Note that the plugins may not support all contact fields, utm codes or contact tags.
+Ak používate CMS, najjednoduchšie je nechať jedne z našich pluginov, aby to urobil za Vás (viď nižšie). Všimnite si, že pluginy nemusia podporovať všetky polia kontaktu, utm kódy alebo tagy kontaktu.
 
-Here are a couple code snippets that may help as well:
+Tu je pár útržkov kódu, ktoré Vám môžu pomôcť:
 
 HTML
 
@@ -162,19 +162,19 @@ body.appendChild(img);
 </script>
 ```
 
-### Contact Fields
+### Polia kontaktu
 
-You can also pass information specific to your contact by setting Mautic contact field(s) to be publicly updatable. Note that values appended to the tracking pixel should be url encoded (%20 for spaces, %40 for @, etc).
+Informácie špecifické pre Váš kontakt môžete posunúť tým, že polia kontaktu v Mauticu nastavíte tak, aby boli verejne aktualizovateľné. Všimnite si, že hodnoty priradené k sledovaciemu pixelu by mali byť URL kódované (%20 pre medzery, %40 pre @, atď.).
 
-### Tags
+### Tagy
 
-The contact's tags can be changed by using the `tags` query parameter. Multiple tags can be separated by comma. To remove a tag, prefix it with a dash (minus sign).  
+Tagy kontaktu sa môžu zmeniť použitím parametrov dotazovania sa na `tagy`. Jednotlivé tagy môžu byť oddelené čiarkou. Ak chcete odstrániť tag, dajte pred neho čiarku (mínus).
 
-For example, `mtracking.gif?tags=ProductA,-ProductB` would add the ProductA tag to the contact and remove ProductB.
+Napríklad, `mtracking.gif?tags=ProductA,-ProductB` by bolo pridanie tagu ProductA ku kontaktu a odstránenie ProductB.
 
-### Available Plugins
+### Dostupné pluginy
 
-Mautic makes this even easier by providing key integrations to many existing content management systems. You can download and use any of the following plugins to automatically add that tracking pixel to your website.
+Mautic to zjednodušuje tým, že poskytuje kľúčové integrácie do mnohých existujúcich systémov správy obsahu. Môžete stiahnuť a používať ktorýkoľvek z nasledujúcich pluginov aby ste automaticky pridali sledovací pixel na Vašu webstránku.
 
 * [Joomla!](http://mautic.org/integration/joomla)
 * [Drupal](http://mautic.org/integration/drupal)
@@ -183,61 +183,60 @@ Mautic makes this even easier by providing key integrations to many existing con
 * [Concrete5](http://mautic.org/integration/concrete5)
 * [Grav](https://github.com/mautic/mautic-grav)
 
-These are just a few of the integrations already created by the Mautic community. More will be added in the future and developers are encouraged to submit their own integrations.
+Je to len malá ukážka integrácií už vytvorených Mautic komunitou. Ďalšie budú pridané v budúcnosti a developeri sú povzbudzovaní aby podali svoje vlastné integrácie.
 
-**Note:** It is important to note that you are not limited by these plugins and you can place the tracking pixel directly on any HTML page for website tracking.
+**Poznámka:** Je dôležité poznamenať, že nie ste obmedzení týmito pluginmi, a že sledovací pixel môžete umiestniť priamo na akúkoľvek HTML stránku pre jej sledovanie.
 
-### Mobile Monitoring
+### Mobilné sledovanie
 
-The essence of monitoring what happens in an App is similar to monitoring what happens on a website. Mautic contains the building blocks needed for native (or pseudo-native) and HTML5-wrapper based Apps, regardless of platform.
+Základom sledovania toho, čo sa v Appke deje sa podobá sledovaniu toho, čo sa deje na webstránke. Mautic obsahuje stavebné bloky potrebné pre natívne (alebo pseudonatívne) a HTML5 Appky, bez ohľadu na platformu.
 
-In short, use named screen views (e.g. main_screen) in your App as your page_url field in the tracker, and the contact's email as the unique identifier, see next section for detailed instructions.
+V skratke povedané, použite pomenované náhľady obrazoviek (napr. hlavná obrazovka) vo Vašej Appke ako Vaše page_url pole v trackeri, a email kontaktu ako unikátny identifikátor. Viď nasledujúcu časť pre podrobnejšie pokyny.
 
-#### Steps in Mautic
+#### Kroky v Mauticu
 
-1. Make the email field publicly editable, this means that a call to the tracking GIF with the variable email will get properly recognized by Mautic.
+1. Spravte emailové pole verejne editovateľným. To znamená, že volanie sledovacieho GIF  v premennom emaili bude správne rozoznané Mauticom.
 
-2. Setup a form, which will be the access point of your campaign (e.g. a new contact email). Make this form as simple as you can, as you will be POST-ing to it from your App. The typical form URL you will POST to is
+2. Vytvorte formulár, ktorý bude vstupným bodom Vašej kampane (napr. nový kontaktný email). Urobte tento formulár tak jednoduchý, ako je to len možné, keďže ho budete zverejňovať z vašej Appky. Typická forma URL na ktorú budete odkazovať je:
 
 ```
 http://your_mautic/form/submit?formId=<form_id>
 ```
 
-You can get the ID from the mautic URL as you view / edit the form in the Mautic interface (or in the forms tables, last column), and you can get the form fields by looking at the HTML of the 'Manual Copy' of the HTML in the forms editing page.
+ID môžete získať s URL Mauticu ako si prezeráte/editujete formulár v rozhraní Mauticu (alebo v tabuľkách formulárov, posledný stĺpec), a polia formulára môžete získať pozretím sa na HTML “manuálnej kópie” na stránke editovania formulárov.
 
-
-3. Define in your campaigns the screens you want to use as triggers (e.g. 'cart_screen' etc.). Mautic is not looking for a real URL in the form 'http://<url>' for page_url, any typical string would do. Like this:
+3. Vo svojej kampani definujte obrazovky, ktoré chcete použiť ako spúšťače (napr. 'obrazovka s nákupným košíkom ', atď.). Mautic sa nepozerá na skutočnú URL vo formulári 'http://<url>' pre page_url, postačí akýkoľvek typický reťazec, napr.:
 
 ```
 http://yourdomain.com/mtracking.gif?page_url=cart_screen&email=myemail@somewhere.com
 ```
 
-#### In your App
+#### Vo vašej Appke
 
-A best-in-class approach is to have a class (say 'mautic') that handles all your tracking needs. For example, this sample method call would POST to the form with ID 3 - see previous section (note: for conciseness and ubiquity, these sample lines are written in JavaScript / ECMAScript-type language, use similar call in your mobile App language of choice).
+Najlepší možný prístup je mať triedu (napr. 'mautic '), ktorá zabezpečuje všetky vaše sledovacie potreby. V tomto príklade by daná metóda volania zverejnila formulár s ID3 - viď predchádzajúcu časť (poznámka: pre stručnosť a všadeprítomnosť sú tieto ukážky kódu napísané v Javascripte / ECMAScript-type jazyku, použite podobné volanie v jazyku Vašej mobilnej Appky).
 
 ```
 mautic.addContact("myemail@somehwere.com",3)
 ```
 
-And then, to track individual user activity in the App, this sample call would make an HTTP request to the tracker:
+A potom aby ste sledovali aktivitu užívateľa v Appke, táto ukážka volania by vytvorila HTTP požiadavku na tracker:
 
 ```
 mautic.track("cart_screen", "myemail@somewhere.com")
 ```
 
-Which is nothing more than an HTTP request to this GET-formatted URL (as also shown in previous section):
+Čo nie je o nič viac, ako HTTP požiadavka pre túto GET-formátovanú URL (ako je tiež ukázané v predchádzajúcej časti):
 
 ```
 http://yourdomain.com/mtracking.gif?page_url=cart_screen&email=myemail@somewhere.com
 ```
 
-Important: Make sure in your App, that the above HTTP request is using a cookie (if possible, re-use the cookie from the mautic.addcontact POST request prior) AND that you reuse this cookie from one request to the next. This how Mautic (and other tracking software) knows that it's really the same user. If you can't do this, you may run in the (unlikely but possible) case where you have multiple contacts from the same IP address and Mautic will merge them all into a single contact as it can't tell who is who without a cookie.
+Dôležité: Uistite sa vo svojej Appke, že vyššie uvedená HTTP žiadosť používa cookie (ak je to možné, znova použite cookie z predchádzajúcej mautic.addcontact POST žiadosti), a že tento cookie použijete znova od jednej žiadosti k nasledujúcej. Takto Mautic (a iný sledovací softvér) vie, že sa v skutočnosti jedná o toho istého užívateľa. Ak to nedokážete urobiť, môže sa stať (nepravdepodobné ale možné), že skončíte s mnohými kontaktmi z tej istej IP adresy a Mautic ich zlúči do jediného kontaktu, pretože bez cookie nevie povedať kto je kto.
 
-### Other Online Monitoring
+### Iné online sledovanie
 
-There are several other ways to monitor contact activity and attach points to those activities. Website monitoring is only one way to track contacts. Other contact monitoring activities can consist of forum posts, chat room messages, mailing list discussion posts, GitHub/Bitbucket messages, code submissions, social media posts, and a myriad of other options.
+Existuje niekoľko iných spôsobov ako sledovať aktivitu kontaktu a priradiť body týmto aktivitám. Sledovanie webstránky je len jedným zo spôsobov sledovania kontaktov. Iné aktivity sledovania kontaktu môžu pozostávať z príspevkov na fórach, správ v chatovacích miestnostiach, diskusných príspevkov na konferenciách, GitHub/Bitbucket správach, podaniach kódu, príspevkov na sociálnych médiách a mnohých iných možnostiach.
 
-### Troubleshooting
+### Riešenie problémov
 
-If the tracking doesn't work, take a look at [Page troubleshooting](./../pages/troubleshooting.html) or [Email troubleshooting](./../emails/troubleshooting.html)
+Ak sledovanie nefunguje, pozrite sa na [Riešeia problémov so stránkami](./../pages/troubleshooting.html) alebo [Riešenia problémo s emailami](./../emails/troubleshooting.html)
