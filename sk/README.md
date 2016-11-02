@@ -1,11 +1,11 @@
-# Mautic Documentation
+# Dokumentácia systému Mautic
 
-### Introduction
-This book serves as the [documentation for Mautic](https://www.mautic.org/docs/index.html), the open source marketing automation system. Just as the code is open source and available for everyone, so is the documentation. Everyone is welcome to help make this information better and improve as needed.
+### Úvod
+Táto príručka slúži ako [dokumentácia pre Mautic](https://www.mautic.org/docs/index.html), systém pre automatický marketing s otvoreným zdrojom. Dokumentácia je otvorená a dostupná každému rovnako ako zdrojový kód. Každý môže vylepšiť tieto informácie.
 
-### Download as PDF
+### Stiahnite ako PDF
 
-[Click here](https://mautic.org/docs/mautic_docs_en.pdf) to download these docs as a PDF.
+[Kliknite sem](https://mautic.org/docs/mautic_docs_en.pdf) pre stiahnutie tejto príručky ako PDF.
 
 ### How to contribute to the docs
 
