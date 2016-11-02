@@ -1,59 +1,63 @@
 # Dashboard
 
-Mautic 1.4.0 brought a customizable dashboard where each user can compose widgets with information she/he wants to track.  Mautic 2.0 brought a number of enhancements to the Dashboard.
+Mautic 1.4.0 predstavil opraviteľnú dashboard, kde si každý užívateľ môže zostaviť widgety s informáciami, ktoré chce sledovať. Mautic 2.0 predstavil množstvo vylepšení Dashboardu.
 
-## Date range filter
+## Filter dátového obdobia
 
-All the widgets will display data in the selected global date range filter at the top of the widget list. The default date range is set from 30 days ago to today. Line charts will change the time unit automatically depending on the day count selected in the date range filter like this:
+Všetky widgety zobrazujú dáta na základe obdobia filtra globálneho dátumu v hornej časti zoznamu widgetov. Štandardné obdobie je nastavené za posledných 30 dní. Linkové grafy zmenia jednotku času automaticky v závislosti na počte zvolených dní v časovom filtri nasledovne:
 
-Date range is equal 1 day: Hours
-Date range is between 1 and 31 days: Days
-Date range is between 32 and 100 days: Weeks
-Date range is between 101 and 1000 days: Months
-Date range is greater than 1001 days: Years
+Dátové obdobie sa rovná 1 dňu: hodiny, 
+Dátové obdobie je medzi 1 až 31 dní: dni
+Dátové obdobie je 32 až 100 dní: týždne
+Dátové obdobie je 101 až 1000 dní: mesiace
+Dátové obdobie je väčšie ako 1001 dní: roky
  
-The only exceptions of widgets which display the same information independent on the date range are *Upcoming emails* and *Recent activity*.
+Jediná výnimka vo widgetoch, ktoré zobrazujú rovnaké informácie v závislosti na období sú *Nadchádzajúce emaily* a *Posledná aktivita*.
 
-## Widgets
+## Widgety
 
-*Warning: Do not create too many widgets. It can slow the dashboard page load down. If you have performance issues, decrease the amount of widgets.*
+*Varovanie: Nevytvárajte príliš veľa widgetov. Môže to spomaliť dobu natiahnutia stránky widgetov. Ak máte problémy s výkonom, zmenšite počet widgetov.*
 
-A new widget can be added to your dashboard when you click on the "Add widget" button. In the "Add wigteg" form which appears after each widget will let you define:
+Nový widget môže byť pridaný na Vašu dashboard keď kliknete na tlačidlo “Pridaj widget”. Vo formulári “Pridaj widget”, ktoré sa zobrazí po každom widgete budete môcť zadefinovať:
 
-- **Name**: Describe what the widget displays. If not filled, Mautic will call it the same as the widget type you select.
-- **Type**: Select what information you want to display from the predefined widget types.
-- **Width**: Select how wide the widget should be. The options are 25%, 50%, 75%, 100%. Default option is 100%. The optimal width for line charts is 100%, for tables 50%, for pie charts 25%.
-- **Height**: Each widget can have different height. 5 heights are predefined. The dashboard will look best if you select a constant height for each widget in one row.
+- **Názov**: Popíšte čo widget zobrazuje. Ak to nie je zadefinovaný, Mautic ho nazve rovnaký ako typ widgetu, ktorý ste zvolili.
+- **Typ**: Zvoľte aké informácie chcete zobraziť z predefinovaných druhov widgetov.
+- **Šírka**: Zvoľte šírku widgetu. Možnosti sú 25%, 50%, 75%, 100%. Predefinovaných je 100%. Optimálna šírka linkových grafov je 100%, pre tabuľky 50% a pre koláčové grafy 25%.
+- **Výška**: Každý widget môže mať rôznu výšku. 5 výšok je predefinovaných. Dashboard bude vyzerať najlepšie ak vyberiete rovnakú výšku pre každý widget v riadku.
 
-Some widgets have additional options:
+Niektoré widgety majú ďalšie možnosti:
 
-**Created contacts in time**
-- Show all contacts: Displays one line with all created contacts.
-- Only identified: Displays one line with only created identified contacts.
-- Only anonymous: Displays one line with only created visitors.
-- All identified vs anonymous: displays 2 lines with created identified and visitors.
-- Top segments: Displays up to 6 lines with contacts added to the top 6 segments. If no such segment exist for the selected date range, the chart will not be displayed.
-- Top segments with Identified vs Anonymous: Displays up to 6 lines of the top 3 segments for the selected date range. Each segment will show 2 lines with identified and visitors.
 
-**Emails in time**
-- Only sent emails: Displays 1 line with sent emails.
-- Only opened emails: Displays 1 line with opened emails.
-- Only failed emails: Displays 1 line with failed emails.
-- Sent and opened emails: Displays 2 lines with sent and opened emails.
-- Sent, opened and failed emails: Displays 3 lines with sent, opened and failed emails.
+**História vytvorených kontaktov**
+- Ukáž všetky kontakty: Zobrazí jeden riadok so všetkými vytvorenými kontaktmi.
+- Len identifikované: Zobrazí jeden riadok s len vytvorenými identifikovanými kontaktmi.
+- Len anonymné: Zobrazí jeden radok s len vytvorenými návštevníkmi.
+- Všetky identifikované vs. anonymné: zobrazí 2 riadky s vytvorenými identifikovanými kontaktmi a návštevníkmi.
+- Top segmenty: Zobrazí až 6 riadkov s kontaktmi, ktoré boli pridelené k top 6 segmentom. Ak takéto segmenty neexistujú pre vybrané obdobie, graf sa nezobrazí.
+- Top segmenty s identifikovanými kontaktmi vs. anonymnými: Zobrazí až 6 riadkov top 3 segmentov pre vybrané obdobie. Každý segment zobrazí 2 riadky s identifikovanými kontaktmi a návštevníkmi.
 
-**Page visits in time**
-- Total visits - Displays 1 line with all visits (page hits).
-- Unique visits - Displays 1 line with unique visits (contacts).
-- Total and unique visits - Displays 2 lines with unique and all visits.
 
-### Widget ordering
+**História emailov**
+- Len poslané emaily: zobrazí 1 riadok poslaných emailov.
+- Len otvorené emaily: zobrazí 1 riadok otvorených emailov.
+- Len zlyhané emaily: zobrazí 1 riadok zlyhaných emailov.
+- Poslané a otvorené emaily: zobrazí 2 riadky s poslanými a otvorenými emailami.
+- Poslané, otvorené a zlyhané emaily: zobrazí 3 riadky s poslanými, otvorenými a zlyhanými emailami.
 
-Each widget can change its location by drag&dropping. The handle is its name.
+
+**História návštevnosti**
+- Celková návštevnosť: zobrazí 1 riadok všetkých návštev (klikov na stránku).
+- Unikátne návštevy: zobrazí 1 riadok s unikátnymi návštevami (kontakty).
+- Celkové a unikátne návštevy: zobrazí 2 riadky s unikátnymi a všetkými návštevami.
+
+
+### Zoradenie widgetov
+
+Každý widget môže zmeniť svoje miesto pomocou drag and drop. Prezývka je jeho názov.
 
 ## Dashboard export
 
-Each dashboard as you configure it can be exported to a single file. You can make a backup for another time, send it to a colleague or share it online. It exports only the widget configuration. Not the data in them.
+Každá dashboard môže byť exportovaná do jediného súboru tak, ako ju nakonfigurujete. Môžete tiež urobiť zálohu na neskôr, poslať ju kolegovi, alebo ju zdieľať  on-line. Exportuje sa len konfigurácia widgetov, nie dáta v nich.
 
 ## Dashboard import
 
@@ -61,16 +65,17 @@ If you export a dashboard, you can then upload it and import it again in the Das
 
 Stock Mautic installation comes with 3 pre-defined dashboards. The one called *default.json* is imported automatically, when your dashboard doesn't contain any widget. The other 2 predefined dashboards are there as an example. You can export and import any other dashboard and then switch between them. Pre-defined dashboards can be:
 
-Previewed - It will display the dashboard widgets for preview. It will load in them actual Mautic data. Nothing is saved or changed by the Apply button.
-Applied - It applies the dashobard as your dashboard. Warning: Your current widgets will be deleted by this action! Export the current dashboard if you want to get back to it later.
-Deleted - It will delete the predefined dashboard.
+Prezreté v náhľade - Zobrazí dashboard widgetov ako náhľad. Nahrá do nich skutočné Mautic dáta. Nič sa neuloží a ani nezmení stlačením tlačidla Použi. 
+Použité - Použije dashboard ako Vašu dashboard. Varovanie: Vaše aktuálne widgety budú týmto zmazané! Exportujte aktuálnu dashboard ak sa ku nej chcete vrátiť neskôr.
+Zmazané - Zmaže predefinovanú dashboard.
 
-## Widget cache
 
-The WidgetDetailEvent automatically caches the widget detail data for a period of time defined in the configuration. Default cache expiration period is 10 minutes.
+## Vyrovnávacia pamäť widgetov
 
-## Dashboard Permissions
+WidgetDetailEvent automaticky nahráva podrobné údaje o widgetoch na určitú dobu do vyrovnávacej pamäte, čo sa dá nastaviť v nastaveniach. Prednastavená doba exspirácie vyrovnávacej pamäte je 10 minút.
 
-If a Mautic user doesn't have the see others or see own permissions for a bundle, she/he won't be able to create widgets for said bundle. However, the widget can still be visible at hers/his dashboard. For example if a user creates the widgets and then the admin removes the permission or via import. In that case the widget is there, but with a message that the user doesn't have permission to see the data.
+## Dashboard oprávnenia
 
-If a Mautic user has permission to see only his/hers own data from a bundle, he/she will see only his/hers own data in the Dashboard widgets. For example only contacts which he/she owns, page hits of the pages he/she created and so on.
+Ak Mautic užívateľ nemá oprávnenia, aby videl vlastný zväzok, alebo aby videl oprávnenia iných, užívateľ nebude môcť vytvoriť widgety pre daný zväzok. Avšak widgety sú stále viditeľné na dashboarde daného užívateľa. Napríklad ak užívateľ vytvorí widgety a potom mu administrátor odstráni oprávnenia. V tom prípade sú widgety tam, ale užívateľ vidí len správu, že nemá dostatočné oprávnenia na to, aby ich videl.
+
+Ak má Mautic užívateľ oprávnenia vidieť len vlastné dáta zo zväzku, daný užívateľ uvidí len vlastné dáta vo widgetoch Dashboardu. Napríklad len kontakty, ktoré má, náhľady stránky, ktorú vytvoril, atď.
