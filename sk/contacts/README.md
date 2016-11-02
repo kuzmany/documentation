@@ -1,38 +1,39 @@
-# Contacts
+# Kontakty
 
-Leads were renamed to contacts in Mautic 1.4.0.
+Vodidlá boli premenované na kontakty vo verzii Mautic 1.4.0.
 
-Contacts are the central factor of a marketing automation platform. These are all the individuals who have visited your websites or interacted with you in some way.
+Kontakty sú stredobodom platformy automatického marketingu. Sú to jednotlivci, ktorí navštívili Vašu stránku alebo nejakým spôsobom boli s Vami v kontakte. 
 
-### Contact Types
+### Typy kontaktov
 
-There are two types of contacts:
-* **Visitors** (formerly anonymous leads) — visitors to your site who have not yet been identified by a form or other interaction.
-  * These contacts are tracked by Mautic but typically remain hidden so as not to clutter your segment.
-* **Standard contacts** — contacts which have identified themselves via a form or some other source. As a result, these contacts typically have a name, email, and other identifying fields.
+Existujú dva druhy kontaktov:
+* **Návštevníci** (predtým anonymné vodidlá) — návštevníci Vašej stránky, ktorí ešte neboli identifikovaní formulárom alebo inou interakciou. 
+  * Tieto kontakty sú sledované Mauticom, ale typicky sú skryté aby nezahltili Váš segment.
+* **Štandardné kontakty** - kontakty, ktoré sa identifikovali prostredníctvom formulára alebo prostredníctvom iného zdroja. Preto majú kontakty typicky meno, email a iné identifikačné políčka.
 
-#### Visitors (formerly anonymous leads)
 
-Anonymous leads were renamed to visitors in Mautic 1.4.0.
+#### Návštevníci (predtým anonymné vodidlá)
 
-You can view visitors by using the 'table view' (use the "t" keyboard shortcut to view contacts in a table or "c" as cards) within the contacts section.
+Anonymné vodidlá boli v Mauticu 1.4.0 premenované na návštevníkov
 
-Visitors are worth tracking, because these could be future customers. By tracking them before they have any interaction, you can retain a log of when they visited your site, which allows you to get a picture of their activity prior to engaging with you.
+Návštevníkov si môžete prezrieť použitím tabuľkového náhľadu (použite “t” skratku na klávesnici aby ste si pozreli kontakty v tabuľke alebo “c” ako kartičky) v sekcii kontaktov. 
 
-##### Search Text
+Návštevníci stoja za to, aby boli sledovaní, pretože to môžu byť budúci zákazníci. Tým, že ich budete sledovať ešte pred tým, ako s nimi budete komunikovať, môžete si vytvoriť záznam, kedy navštívili Vašu webstránku, čo Vám umožňuje vytvoriť si obraz o ich aktivite ešte pred tým, ako Vás kontaktujú.
+
+##### Hľadať text
 
 ```
 is:anonymous
 ```
-##### Screenshot
+##### Screenshoty
 
 ![](/contacts/media/contacts-anonymous.jpg)
-The resulting list will be those IP addresses which have not yet provided identifying information.
+Výsledný zoznam bude obsahovať IP adresy, ktoré ešte neposkytli identifikačné informácie.
 
-#### Standard Contacts
+#### Štandardné kontakty
 
-The second type of contact is a standard contact. These contacts have identified themselves via a form or other source — you may also have more information about them from previous interactions. As a result, these contacts typically have a name, email, and other identifying information which can be associated with the contact.
+Druhým typom kontaktov sú štandardné kontakty. Tieto kontakty sa identifikovali prostredníctvom formulára alebo použitím iného zdroja - môžete mať o nich ďalšie informácie z predchádzajúcich interakcií. V dôsledku toho majú kontakty typicky meno, email a iné identifikačné informácie, ktoré môžu byť asociované s kontaktom.
 
-The standard contact is the preferred contact within Mautic. These are contacts which may have started as a visitor, but at some point provided additional information such as a name, email address, social network handle, or other identifying characteristics. You can nurture these contacts through the Mautic marketing automation platform.
+Štandardný kontakt je preferovaným kontaktom v Mauticu. Sú to kontakty, ktoré možno začali ako návštevníci, ale potom poskytli dodatočné informácie ako meno, emailovú adresu, prezývku na sociálnej siete, alebo iné identifikátory. O tieto kontakty sa môžete starať prostredníctvom platformy automatického marketingu Mautic.
 
-The [Manage Contacts](https://www.mautic.org/docs/en/contacts/managing_contacts.html) section provides more information on what you can manage with standard contacts.
+Časť [Správa kontaktov](https://www.mautic.org/docs/en/contacts/managing_contacts.html) poskytuje viac informácií o tom, čo môžete robiť so štandardnými kontaktmi.
