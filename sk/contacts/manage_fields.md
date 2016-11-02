@@ -1,26 +1,27 @@
-# Custom Fields
+# Vlastné polia
 
-You can manage custom fields through the admin menu (click the cogwheel upper right hand side of Mautic). 
+Vlastné polia môžete spravovať prostredníctvom admin menu (kliknite na ozubené koleso v pravom hornom rohu Mauticu).
 
-The fields page will let you view all existing contact fields as well as any custom contact fields you've created.
+Stránka s poľami zobrazí všetky existujúce kontaktné polia, ako aj akékoľvek vlastné kontaktné polia, ktoré ste vytvorili.
 
 ![](/contacts/media/custom-fields.jpg)
 
-You will notice the group column which will show you where the specific field will be shown on the contact profile. In the last column, you may see several icons which signify various properties of the field:
+Všimnite si stĺpec skupín, ktorý Vám ukáže kde bude konkrétne pole zobrazené v profile kontaktu. V poslednom stĺpci môžete vidieť niekoľko ikon, ktoré predstavujú rôzne vlastnosti poľa:
 
-1. Lock icon - These fields are unable to be removed as they are used by the core installation. 
-2. List icon - These fields can be used as filters of segments.
-3. Asterisks icon - These fields are required when filling in the contact form
-4. Globe icon - These fields are publicly updatable through the tracking pixel URL query (see [Contact Monitoring](contact_monitoring.html) for more details).
+1. Zamknutá ikona - Tieto polia nemôžu byť odstránené, keďže sú používané jadrom inštalácie.
+2. Ikona zoznamu - Tieto polia môžu byť použité ako filtre segmentov.
+3. Ikona hviezdičky - Tieto polia sú potrebné pre vyplnenie kontaktného formulára.
+4. Ikona zemegule - Tieto polia sú verejne aktualizovateľné prostredníctvom sledovacieho pixelu URL dotazu (viď
+ [Sledovanie kontaktu](contact_monitoring.html) pre viac informácií).
 
-### Published Fields
+### Zverejnené polia
 
-The check mark which shows before each label title is a clickable toggle which will publish and unpublish the field.
+Fajka pred každým názvom štítku je kliknuteľný prepínač, ktorý zverejní alebo stiahne dané pole.
 
 ![](/contacts/media/unpublish-fields.gif)
 
-### New Field
+### Nové pole
 
-You can create additional custom fields and define the data type you want that field to hold. In addition to the data type you will also select the group for that particular field. This will define where the field displays on the contact edit and detail view.
+Môžete vytvoriť dodatočné vlastné polia a definovať dáta, ktoré majú byť v poli. Okrem druhu dát si tiež vyberiete skupinu pre dané pole. To zadefinuje, kde sa pole zobrazí pri editácii kontaktu a náhľade detailov. 
 
 ![](/contacts/media/new-custom-field.jpg)
