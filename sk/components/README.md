@@ -1,6 +1,6 @@
 Menu **Komponenty** obsahuje nasledovné položky:
 
-* Výhody
+* Prílohy
 * Dynamický webový obsah
 * Formuláre
 * Vstupné stránky
