@@ -1,11 +1,10 @@
-# Výhody
+# Assets
 
-Výhody sú také položky, ktoré poskytujete svojim kontaktom zväčša po vyplnení formulára. Tieto výhody su trackovatelné položky a môžu obsahovať svoje vlastné bodové hodnoty, históriu a trackovacie štatitiky.
+Assets are those items which you will provide to your contacts typically upon completion of a form. These assets are trackable items and can carry their own point values, history, and tracking statistics.
 
+### Example Assets
 
-### Príklady výhod
-
-Zopár bežných príkladov výhod:
-* ebook poskytnutý na základe konkrétneho produktu, alebo služby
-* stiahnuteľné demo, alebo iný digitálny produkt
-* akýkoľvek iný súbor, ktorý by mohol kontakt zaujímať, ako napr. video, mp3, prezentácia
+A few common examples of assets include:
+* a white paper provided in regards a particular product or service
+* a downloadable demo application or other digital product; 
+* any file of interest to the contact such as video, mp3, presentation, etc.
