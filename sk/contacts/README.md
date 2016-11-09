@@ -1,24 +1,22 @@
 # Kontakty
 
-Vodidlá boli premenované na kontakty vo verzii Mautic 1.4.0.
+Pomenovanie Leads bolo premenované na kontakty vo verzii Mautic 1.4.0.
 
 Kontakty sú stredobodom platformy automatického marketingu. Sú to jednotlivci, ktorí navštívili Vašu stránku alebo nejakým spôsobom boli s Vami v kontakte. 
 
 ### Typy kontaktov
 
 Existujú dva druhy kontaktov:
-* **Návštevníci** (predtým anonymné vodidlá) — návštevníci Vašej stránky, ktorí ešte neboli identifikovaní formulárom alebo inou interakciou. 
+* **Návštevníci**  — návštevníci Vašej stránky, ktorí ešte neboli identifikovaní formulárom alebo inou interakciou. 
   * Tieto kontakty sú sledované Mauticom, ale typicky sú skryté aby nezahltili Váš segment.
 * **Štandardné kontakty** - kontakty, ktoré sa identifikovali prostredníctvom formulára alebo prostredníctvom iného zdroja. Preto majú kontakty typicky meno, email a iné identifikačné políčka.
 
 
-#### Návštevníci (predtým anonymné vodidlá)
-
-Anonymné vodidlá boli v Mauticu 1.4.0 premenované na návštevníkov
+#### Návštevníci
 
 Návštevníkov si môžete prezrieť použitím tabuľkového náhľadu (použite “t” skratku na klávesnici aby ste si pozreli kontakty v tabuľke alebo “c” ako kartičky) v sekcii kontaktov. 
 
-Návštevníci stoja za to, aby boli sledovaní, pretože to môžu byť budúci zákazníci. Tým, že ich budete sledovať ešte pred tým, ako s nimi budete komunikovať, môžete si vytvoriť záznam, kedy navštívili Vašu webstránku, čo Vám umožňuje vytvoriť si obraz o ich aktivite ešte pred tým, ako Vás kontaktujú.
+Je doležité sledovať anonymných návśtevníkov, pretože to môžu byť vaši budúci zákazníci. Tým, že ich budete sledovať ešte pred tým, ako s nimi budete komunikovať, môžete si vytvoriť záznam, kedy navštívili Vašu webstránku, čo Vám umožňuje vytvoriť si obraz o ich aktivite ešte pred tým, ako Vás kontaktujú.
 
 ##### Hľadať text
 
