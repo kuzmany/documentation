@@ -1,10 +1,10 @@
 # Začíname
 
-Super! Stiahli ste si nástroj pre zautomatizovanie marketingu. Je to skvelý začiatok, ale teraz určite rozmýšľate čo a ako ďalej. Postupujte podľa tohto jednoduchého návodu, aby ste mohli začať používať svoju prekrásnu novú hračku!
+Super! Stiahli ste si nástroj pre zautomatizovanie marketingu. Je to skvelý začiatok, ale teraz určite rozmýšľate čo a ako ďalej. Postupujte podľa tohto jednoduchého návodu, aby ste mohli začať používať Mautic!
 
 ## Krok 1: Nainštalujte Mautic
 
-Ak ste už stiahli zip súbor z príslušnej stránky, alebo už máte Mautic nainštalovaný z iného zdroja (Softaculous, Bitnami, Digital Ocean atď.) potom ste už vykonali prvý krok. Ak nie, potom musíte nahrať Mautic balík (zip súbor) na Váš server, rozbaliť súbory a potom prejsť na dané miesto vo Vašom prehľadávači. Objavíte, že Mautic má veľmi jednoduchý proces inštalácie, pri ktorej len postupujete podľa pokynov na obrazovke.
+Ak ste už stiahli zip súbor z Mautic stránok, alebo už máte Mautic nainštalovaný z iného zdroja (Softaculous, Bitnami, Digital Ocean atď.) potom ste už vykonali prvý krok. Ak nie, potom musíte nahrať Mautic balík (zip súbor) na Váš server, rozbaliť súbory a potom prejsť na dané miesto vo Vašom prehľadávači. Objavíte, že Mautic má veľmi jednoduchý proces inštalácie, pri ktorej len postupujete podľa pokynov na obrazovke.
 
 ## Krok 2: Pridajte cron úlohy
 

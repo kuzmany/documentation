@@ -1,11 +1,11 @@
-# Výhody
+# Súbory
 
-Výhody sú také položky, ktoré poskytujete svojim kontaktom zväčša po vyplnení formulára. Tieto výhody su trackovatelné položky a môžu obsahovať svoje vlastné bodové hodnoty, históriu a trackovacie štatitiky.
+Súbory sú také položky, ktoré poskytujete svojim kontaktom zväčša po vyplnení formulára. Tieto súbory sú trackovatelné položky a môžu byť použité zvyšovanie skóre kontaktu, históriu a  štatitiky.
 
 
-### Príklady výhod
+### Príklady súborov
 
-Zopár bežných príkladov výhod:
-* ebook poskytnutý na základe konkrétneho produktu, alebo služby
+Zopár bežných príkladov súborov:
+* ebook rodukty, alebo služby
 * stiahnuteľné demo, alebo iný digitálny produkt
 * akýkoľvek iný súbor, ktorý by mohol kontakt zaujímať, ako napr. video, mp3, prezentácia

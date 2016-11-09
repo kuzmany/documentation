@@ -1,5 +1,5 @@
-* [English](en)
-* [日本語](jp)
+﻿* [English](en)
+* [slovenčina](sk)
 
 <!--
 * [Deutsch](de)
