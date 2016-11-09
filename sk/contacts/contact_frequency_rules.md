@@ -1,9 +1,8 @@
-# Contact Frequency Rules
-Frequency rules are a set of rules used to define the number of times a contact should be contacted by any means in Mautic. At this stage Email and SMS have been implemented, but other forms of contact should also be applied as necessary. Such as social media mentions or messages sent in the future.
+# Pravidlá frekvencie kontaktov
+Pravidlá frekvenice je súbor pravidiel použitých na definovanie počtu, koľkokrát môže byť kontakt kontatovaný cez Mautic za všetkých okolností. V tejto fáze boli implementované email a SMS správy, ale ostatné formy kontaktovania by mali byť zahrnuté tak ako bude potrebné. Ako sú napríklad spomenutia v sociálnych mádiách, alebo správy poslané v budúcnosti.
 
-## How to set frequency rules
+## Ako nastaviť pravidlá frekvencie
 
-- Frequency rules can be set globally from the configuration panel on both the email and sms settings.
+- Pravidlá frekvencie môžu byť nastavené globálne z konfiguračného panelu pre obe, emailové aj smskové nastavenia.
 
-- Frequency rules can also be applied on a contact's detail page, from the dropdown menu on the upper right hand side. In this area you can select the channels where you want the rules to apply. Setting the rule here will override the general settings.
-
+- Pravidlá frekvencie môžu byť tiež nastavené na stranke s podrobnosťami o kontakte z rozbaľovacieho menu, ktoré sa nachádza v pravej hornej časti okna. Na tomto mieste môžete nastaviť kanály, pri ktorých chcete mať aplikované spomínané pravidlá. Nastavenie tu premostí nastavenie pravidla v globálnych nastaveniach.
