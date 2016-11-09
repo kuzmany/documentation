@@ -1,10 +1,10 @@
-Menu **Komponenty** obsahuje nasledovné položky:
+The **Components** menu contains the following items:
 
-* Prílohy
-* Dynamický webový obsah
-* Formuláre
-* Vstupné stránky
+* Assets
+* Dynamic Web Content
+* Forms
+* Landing Pages
 
-Tieto položky musia byť povytvárané skôr, ako ich použijete v kampani.
+These items must be created before you can use them in a campaign.
 
 ![](/components/media/components-dropdown.jpg)

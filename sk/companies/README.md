@@ -1,46 +1,45 @@
-# Spoločnosti
+# Companies
 
-Spoločnosti je spôsob organizovania kontaktov na základe spoločnosti(í), v ktorej kontakt pracuje, alebo pracoval.
+Companies are a way to group contacts based on the company(ies) the contact works or has worked for.
 
-### Vlastné polia pre Spoločnosti
+### Company Custom Fields
 
-Sada vlastných polí pre spoločnosti je súčasťou inštalácie Mautiku, ale tito polia si môžete voľne prisposobiť vašim potrebám.
+With Mautic's installation a set of custom fields is provided for companies, but you can customize these fields to your needs.
 
-1. Choďte na vlastné polia a vytvorte akékoľvek pole pre spoločnosť potrebujete.
-2. Choďte na pravé rozbaľovacie menu a priraďte toto pole k 'Spoločnosti'
+1. Go to custom fields and create any company field you need.
+2. Go to the right select box to assign this field to 'Company'.
 
-### Segmenty spoločností
+### Company Segments
 
-Mäžete vytvoriť segment založený na záznamoch o spoločnosti. Jendoducho vyberte ľubovoľné pole spoločnosti, zaraďte ho do filtra s prislúchajúcim kritériom a všetky kontakty vyhovujúce tomuto filtru budú zaradené do segmentu.
+You can create a segment based on a company record, simply select any company field to filter with and the matching criteria for it, and contacts that match any company filtered will be added to the segment. 
  
-### Identifikovanie spoločností
+### Identifying Companies
 
-Spoločnosti sú identifikované výhradne na základe zhodných kritérií založených na Názve spoločnosti, Meste, Krajine (a/alebo Štáte). Ak údaj o meste, alebo krajine nie je doručený ako identifikátor, spoločnosť nebude spárovaná, alebo vytvorená.
-  
+Companies are identified strictly through a matching criteria based on Company Name, City, Country (and/or State). If city of country are not delivered as identifying fields to identify a contact, a company will not be matched or created.  
 
-### Kampaňové akcie spoločností
+### Campaign Company Actions
 
-Kontakt môže byť pridaný do novej spoločnosti na základe kampaňovej akcie
+A contact can be added to a new company based on a campaign action
 
-#### Vytvor/Spravuj spoločnosti
-Na vytvorenie, alebo spravovanie spoločnosti, choďte do menu spoločností označeného ikonou budovy. Tu môžete vytvárať, upravovať alebo mazať záznamy o spoločnostiach.
+#### Create/Manage Companies
+To create or manage companies, go to the companies menu identified by the building icon. In this area you can create, edit or delete companies.
 
-#### Priradenie spoločnosti ku kontaktu
-Je niekoľko rozličných sposobov priradenia spoločnosti ku kontaktu, všetky sú vysvetlené tu:
+#### Assigning Companies to Contacts
+There are different ways to assign a company to a contact, all explained next:
 
-##### Profil kontaktu
-Môžete priradiť kontakt k spoločnosti na profilovej stránke kontaktu počas vytvárania alebo úpravy už existujúceho kontaktu. Posledná priradená spoločnosť bude považovaná za primárnu spoločnosť daného kontaktu.
+##### Contact's profile
+You can assign a contact to companies in the contact's profile page when creating or editing an existing one. The latest company assigned will be treated as the primary company for the contact.
 
-##### Zobrazenie zoznamu kontaktov
-Môžete dávkovo priradiť spoločnosť k vybraným kontaktom v zobrazení zoznamu kontaktov.
+##### Contacts list view
+You can batch assign companies to selected contacts in the contact's list view.
 
-##### Cez kampaň
-Možete priradiť spoločnosť k identifikovaným kontaktom cez kampaň vybraním akcie 'Priraď kontakt k spoločnosti'.
+##### Through a campaign
+You can assign a company to a identified contacts through a campaign by selecting the 'Assign contact to company' action.
 
-##### Keď sa identifikuje kontakt cez formulár
-Ak je kontakt identifikovaný cez formulár, spoločnosť može byť taktiež identifikovaná/vytvorená ak:
+##### When identifying a contact through a form
+If a contact is identified through a form a company can also be identified/created if:
+ -Company name is selected as a form field (mandatory for company matching/creation).
+ -City is selected as a form field (mandatory for company matching/creation).
+ -Country is selected as a form field (mandatory for company matching/creation).
+ -State is selected as a form field (optional for company matching/creation).
  
-  - Meno spoločnosti je zvolené ako pole formuláru (povinné pre pridadenie/vytvorenie spoločnosti)
-  - Mesto je zvolené ako pole formuláru (povinné pre pridadenie/vytvorenie spoločnosti)
-  - Krajina je zvolená ako pole formuláru (povinné pre pridadenie/vytvorenie spoločnosti)
-  - Štát je zvolený ako pole formuláru (povinné pre pridadenie/vytvorenie spoločnosti)
