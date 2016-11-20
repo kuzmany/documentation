@@ -1,4 +1,4 @@
-## Fronty správ
+## Fronta správ
 
 Keď sa spustí _**marketingový**_ email z kampane, alebo newsletter (segmentové maily) a  keď má kontakt nastavené pravidlo frekvencie, alebo je pravidlo rozosielania nastavené dafultne v Konfigurácii, email môže byť poslaný do fronty na spracovanie.
 
